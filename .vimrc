@@ -25,6 +25,7 @@ let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarOpen<CR>
 nnoremap <leader>ll :TagbarClose<CR>
 
+
 "General
 set ruler "shows line and column of the cursor
 set nocompatible      " be improved
