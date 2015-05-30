@@ -1,6 +1,6 @@
 
-red=$(tput setaf 1)
-green=$(tput setaf 2)
-blue=$(tput setaf 4)
-reset=$(tput sgr0)
-PS1='\[$red\]\u\[$reset\]@\[$green\]\h\[$reset\]:\[$blue\]\w\[$reset\]\$ '
+red="\e[0;31m"
+green="\e[0;32m"
+blue="\e[0;34m"
+reset="\e[0m"
+PS1='\['${red}'\]\u\['${reset}'\]@\['${green}'\]\h\['${reset}'\]:\['${blue}'\]\w\['${reset}'\]\$ '
