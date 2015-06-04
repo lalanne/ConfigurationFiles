@@ -72,7 +72,14 @@ let g:clang_close_preview=1
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 "vim airline (powerline)
-set laststatus=2
+set laststatus=2                                                                                                                                                           
+let g:airline_powerline_fonts=1                                                                                                                                        
+let g:airline_theme='dark'                                                                                                             
+                  
+if !exists('g:airline_symbols')                                                                                                        
+    let g:airline_symbols = {}                                                                                                                                   
+endif                                                                                                                                                           
+let g:airline_symbols.space = "\ua0"  
 
 "set line width
 "set colorcolumn=90
