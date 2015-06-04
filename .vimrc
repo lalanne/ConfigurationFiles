@@ -27,7 +27,6 @@ let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarOpen<CR>
 nnoremap <leader>ll :TagbarClose<CR>
 
-
 "General
 set ruler "shows line and column of the cursor
 set nocompatible      " be improved
@@ -74,7 +73,12 @@ let g:clang_user_options='|| exit 0'
 let g:clang_close_preview=1
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
+"vim airline (powerline)
+set laststatus=2
+
 "set line width
 "set colorcolumn=90
 "match OverLength /\%91v.\+/
+
+
 
