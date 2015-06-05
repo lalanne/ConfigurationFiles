@@ -1,50 +1,29 @@
+"handling plugins
 execute pathogen#infect()
 
-syntax enable
-
-"background color
-if has('gui_running')
-  set background=light
-else
-  set background=light
-endif
-
-"color scheme
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-
-"colorscheme solarized
+"color Scheme
 colorscheme molokai
-"let g:molokai_original = 1 
-"let g:rehash256 = 1
-
-"TagBar
-let g:tagbar_usearrows = 1
-nnoremap <leader>l :TagbarOpen<CR>
-nnoremap <leader>ll :TagbarClose<CR>
 
 "General
-set ruler "shows line and column of the cursor
-set nocompatible      " be improved
-set tabstop=4
-set shiftwidth=4
+set ruler               "shows line and column of the cursor
+set nocompatible        "be improved
+set tabstop=4           "a tab is four spaces          
+set shiftwidth=4        "number of spaces to use when auto indent
 set expandtab
 set softtabstop=4
 set smartindent
-set autoindent
-set cursorline
+set autoindent          "set autoindent
 set showbreak=↪
 set autoindent  
-set hlsearch
-set incsearch
-set showmatch
-set number 
+set hlsearch            "highlight search terms
+set incsearch           "show search matches as you type
+set showmatch           "show matching parenthesis
+set number              "show line numbers
 set autochdir
 set list
 set visualbell
 set listchars=extends:❯,precedes:❮
+
 syntax on
 
 filetype on
@@ -66,24 +45,15 @@ map <F7> : !gcc % && ./a.out <CR>
 "SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
 
-"clang
-let g:clang_user_options='|| exit 0'
-let g:clang_close_preview=1
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-
 "vim airline (powerline)
-set laststatus=2                                                                                                                                                           
-let g:airline_powerline_fonts=1                                                                                                                                        
-let g:airline_theme='dark'                                                                                                             
+set laststatus=2 
+let g:airline_powerline_fonts=1 
+let g:airline_theme='dark' 
                   
-if !exists('g:airline_symbols')                                                                                                        
-    let g:airline_symbols = {}                                                                                                                                   
-endif                                                                                                                                                           
+if !exists('g:airline_symbols') 
+    let g:airline_symbols = {} 
+endif 
+
 let g:airline_symbols.space = "\ua0"  
-
-"set line width
-"set colorcolumn=90
-"match OverLength /\%91v.\+/
-
 
 
