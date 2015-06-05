@@ -3,14 +3,13 @@ execute pathogen#infect()
 
 "color Scheme
 colorscheme molokai
-
+                            
 "General
 set ruler               "shows line and column of the cursor
 set nocompatible        "be improved
 set tabstop=4           "a tab is four spaces          
 set shiftwidth=4        "number of spaces to use when auto indent
-set expandtab
-set softtabstop=4
+set expandtab           "insert spaces where tabs are inserted
 set smartindent
 set autoindent          "set autoindent
 set showbreak=↪
