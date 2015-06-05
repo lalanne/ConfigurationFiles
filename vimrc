@@ -25,8 +25,10 @@ set backspace=indent,eol,start      "allows you to delete previously enter chara
  
 syntax on
 
-filetype on
-filetype plugin on
+filetype on             "detecting file type that is being edited
+filetype plugin on      "load the right plugins for a filetype
+filetype plugin indent on           "indenting intelligence is enable depending on
+                                    "file type
 
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
