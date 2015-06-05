@@ -11,14 +11,13 @@ set tabstop=4           "a tab is four spaces
 set shiftwidth=4        "number of spaces to use when auto indent
 set expandtab           "insert spaces where tabs are inserted
 set smartindent
-set autoindent          "set autoindent
+set autoindent         
 set showbreak=↪
-set autoindent  
 set hlsearch            "highlight search terms
 set incsearch           "show search matches as you type
 set showmatch           "show matching parenthesis
 set number              "show line numbers
-set autochdir
+set autochdir           "set working directory as the one of the file you are editing
 
 set visualbell
 set backspace=indent,eol,start      "allows you to delete previously enter characters
