@@ -19,9 +19,8 @@ set incsearch           "show search matches as you type
 set showmatch           "show matching parenthesis
 set number              "show line numbers
 set autochdir
-set list
+
 set visualbell
-set listchars=extends:❯,precedes:❮
 set backspace=indent,eol,start      "allows you to delete previously enter characters
                                     "with backspace key
  
