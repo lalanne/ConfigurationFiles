@@ -1,9 +1,16 @@
 "handling plugins
 execute pathogen#infect()
 
-"color Scheme
-colorscheme molokai
-                            
+"color scheme
+"colorscheme molokai
+"color scheme solarized
+syntax enable
+set background=light
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+
+colorscheme solarized
+
 "General
 set ruler               "shows line and column of the cursor
 set nocompatible        "be improved
