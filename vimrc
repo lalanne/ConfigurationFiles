@@ -2,14 +2,14 @@
 execute pathogen#infect()
 
 "color scheme
-"colorscheme molokai
+colorscheme molokai
 "color scheme solarized
-syntax enable
-set background=light
-let g:solarized_termcolors=256
-let g:solarized_contrast="normal"
-
-colorscheme solarized
+"syntax enable
+"let g:solarized_visibility = "high"
+"let g:solarized_contrast = "high"
+"let g:solarized_termcolors=256
+"set background=dark
+"colorscheme solarized
 
 "General
 set ruler               "shows line and column of the cursor
