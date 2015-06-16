@@ -64,4 +64,5 @@ endif
 
 let g:airline_symbols.space = "\ua0"  
 
-
+"For MacVIM to show the symbols of powerline airline
+set guifont=Source\ Code\ Pro\ for\ Powerline
