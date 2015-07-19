@@ -50,6 +50,10 @@ map <F8> : !c++ % && ./a.out <CR>
 "single file compilation and execution C++
 map <F7> : !gcc % && ./a.out <CR>
 
+nnoremap - <C-w>s 
+nnoremap \| <C-w>v 
+
+
 "SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
 
