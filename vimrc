@@ -3,13 +3,6 @@ execute pathogen#infect()
 
 "color scheme
 colorscheme molokai
-"color scheme solarized
-"syntax enable
-"let g:solarized_visibility = "high"
-"let g:solarized_contrast = "high"
-"let g:solarized_termcolors=256
-"set background=dark
-"colorscheme solarized
 
 "General
 set ruler               "shows line and column of the cursor
@@ -53,7 +46,6 @@ map <F7> : !gcc % && ./a.out <CR>
 
 nnoremap - <C-w>s 
 nnoremap \| <C-w>v 
-
 
 "SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
