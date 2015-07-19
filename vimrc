@@ -23,7 +23,8 @@ set showbreak=↪
 set hlsearch            "highlight search terms
 set incsearch           "show search matches as you type
 set showmatch           "show matching parenthesis
-set number              "show line numbers
+"set number              "show line numbers
+set relativenumber      "show relative line numbers
 set autochdir           "set working directory as the one of the file you are editing
 
 set visualbell
