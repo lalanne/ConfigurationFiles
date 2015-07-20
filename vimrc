@@ -16,8 +16,13 @@ set showbreak=↪
 set hlsearch            "highlight search terms
 set incsearch           "show search matches as you type
 set showmatch           "show matching parenthesis
-"set number              "show line numbers
-set relativenumber      "show relative line numbers
+
+if version >= 730
+    set relativenumber  "show relative line numbers
+else
+    set number          "show line numbers
+endif
+
 set autochdir           "set working directory as the one of the file you are editing
 
 set visualbell
