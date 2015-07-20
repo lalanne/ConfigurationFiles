@@ -17,7 +17,7 @@ set hlsearch            "highlight search terms
 set incsearch           "show search matches as you type
 set showmatch           "show matching parenthesis
 
-if version >= 730
+if version >= 703
     set relativenumber  "show relative line numbers
 else
     set number          "show line numbers
