@@ -66,5 +66,9 @@ endif
 
 let g:airline_symbols.space = "\ua0"  
 
+"Tagbar
+let g:tagbar_usearrows = 1
+nnoremap <leader>l :TagbarToggle<CR>
+
 "For MacVIM to show the symbols of powerline airline
 set guifont=Source\ Code\ Pro\ for\ Powerline
