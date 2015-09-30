@@ -78,3 +78,5 @@ set guifont=Source\ Code\ Pro\ for\ Powerline
 
 "Folding by syntax
 set foldmethod=syntax
+set nofoldenable "no fold when open
+set foldlevel=2
