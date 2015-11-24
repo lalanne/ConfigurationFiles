@@ -2,7 +2,13 @@
 execute pathogen#infect()
 
 "color scheme
+syntax enable
+"let g:rehash256 = 1
+let g:molokai_original=1
 colorscheme molokai
+"transparency
+hi Normal ctermfg=252 ctermbg=none
+set t_Co=256
 
 "General
 set ruler               "shows line and column of the cursor
