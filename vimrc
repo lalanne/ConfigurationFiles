@@ -7,7 +7,7 @@ syntax enable
 let g:molokai_original=1
 colorscheme molokai
 "transparency
-hi Normal ctermfg=252 ctermbg=none
+"hi Normal ctermfg=252 ctermbg=none
 set t_Co=256
 
 "General
