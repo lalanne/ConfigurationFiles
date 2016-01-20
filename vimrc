@@ -3,7 +3,7 @@ execute pathogen#infect()
 
 "color scheme
 syntax enable
-"let g:rehash256 = 1
+let g:rehash256 = 0
 let g:molokai_original=1
 colorscheme molokai
 "transparency
