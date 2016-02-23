@@ -3,12 +3,9 @@ execute pathogen#infect()
 
 "color scheme
 syntax enable
-let g:rehash256 = 0
-let g:molokai_original=1
-colorscheme molokai
-"transparency
-"hi Normal ctermfg=252 ctermbg=none
-set t_Co=256
+set background=dark
+set t_Co=16
+colorscheme solarized
 
 "General
 set ruler               "shows line and column of the cursor
@@ -65,6 +62,8 @@ let g:SuperTabDefaultCompletionType = "context"
 set laststatus=2 
 let g:airline_powerline_fonts=1 
 let g:airline_theme='dark' 
+"tabs airline
+let g:airline#extensions#tabline#enabled = 1
                   
 if !exists('g:airline_symbols') 
     let g:airline_symbols = {} 
@@ -86,3 +85,5 @@ set guifont=Source\ Code\ Pro\ for\ Powerline
 set foldmethod=syntax
 set nofoldenable "no fold when open
 set foldlevel=2
+
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
