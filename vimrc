@@ -74,6 +74,10 @@ let g:airline_symbols.space = "\ua0"
 "Tagbar
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
+autocmd BufEnter *.cpp nested TagbarOpen
+autocmd BufEnter *.hpp nested TagbarOpen
+autocmd BufEnter *.c nested TagbarOpen
+autocmd BufEnter *.h nested TagbarOpen
 
 "CtrlP
 nnoremap <leader>p :CtrlP<CR>
