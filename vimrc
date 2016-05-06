@@ -7,6 +7,9 @@ set background=dark
 set t_Co=16
 colorscheme solarized
 
+"transparency
+hi Normal guibg=NONE ctermbg=NONE
+
 "General
 set ruler               "shows line and column of the cursor
 set nocompatible        "be improved
@@ -22,6 +25,7 @@ set showmatch           "show matching parenthesis
 
 if version >= 703
     set relativenumber  "show relative line numbers
+    set nu              "show current line number in current line not 0
 else
     set number          "show line numbers
 endif
@@ -53,7 +57,12 @@ map <F8> : !c++ % && ./a.out <CR>
 map <F7> : !gcc % && ./a.out <CR>
 
 nnoremap - <C-w>s 
-nnoremap \| <C-w>v 
+nnoremap \| <C-w>v A
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 "SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
@@ -91,3 +100,8 @@ set nofoldenable "no fold when open
 set foldlevel=2
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+"ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
