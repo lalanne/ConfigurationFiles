@@ -2,13 +2,18 @@
 execute pathogen#infect()
 
 "color scheme
-syntax enable
-set background=dark
-set t_Co=16
-colorscheme solarized
+"syntax enable
+"set background=dark
+"set t_Co=16
+"colorscheme solarized
+
+let g:rehash256 = 0
+let g:molokai_original = 0
+colorscheme molokai
 
 "transparency
-hi Normal guibg=NONE ctermbg=NONE
+hi Normal ctermbg=NONE
+set t_Co=256
 
 "General
 set ruler               "shows line and column of the cursor
@@ -22,6 +27,7 @@ set showbreak=↪
 set hlsearch            "highlight search terms
 set incsearch           "show search matches as you type
 set showmatch           "show matching parenthesis
+set cursorline          "highlight currentline
 
 if version >= 703
     set relativenumber  "show relative line numbers
@@ -87,6 +93,8 @@ autocmd BufEnter *.cpp nested TagbarOpen
 autocmd BufEnter *.hpp nested TagbarOpen
 autocmd BufEnter *.c nested TagbarOpen
 autocmd BufEnter *.h nested TagbarOpen
+"autocmd BufEnter *.js nested TagbarOpen
+"autocmd BufEnter *.py nested TagbarOpen
 
 "CtrlP
 nnoremap <leader>p :CtrlP<CR>
