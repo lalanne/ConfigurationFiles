@@ -11,6 +11,9 @@ Plug 'neomake/neomake'
 
 call plug#end()
 
+"truecolors
+set termguicolors
+
 colorscheme molokai
 
 "General
