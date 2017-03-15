@@ -34,7 +34,7 @@ else
     set number          "show line numbers
 endif
 
-"" Give a shortcut key to NERD Tree
+" Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
 
 "CtrlP
@@ -43,7 +43,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-"" Use deoplete.
+" Use deoplete.
 let g:deoplete#enable_at_startup = 1
 
 "vim airline (powerline)
@@ -54,7 +54,7 @@ let g:airline_theme='dark'
 let g:airline#extensions#tabline#enabled = 1
 
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 
 let g:airline_symbols.space = "\ua0"
@@ -70,4 +70,5 @@ autocmd BufEnter *.h nested TagbarOpen
 "neomake
 autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_open_list = 2
+
 
