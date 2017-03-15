@@ -68,7 +68,7 @@ autocmd BufEnter *.c nested TagbarOpen
 autocmd BufEnter *.h nested TagbarOpen
 
 "neomake
-autocmd! BufWritePost,BufEnter * Neomake
+autocmd! BufWritePost * Neomake
 let g:neomake_open_list = 2
 
 
