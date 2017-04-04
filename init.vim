@@ -29,6 +29,8 @@ set hlsearch            "highlight search terms
 set incsearch           "show search matches as you type
 set showmatch           "show matching parenthesis
 set cursorline          "highlight currentline
+set list                "show special characters
+set listchars=tab:▸\ ,eol:¬ "show tabs and end of line
 
 if version >= 703
     set relativenumber  "show relative line numbers
@@ -73,5 +75,7 @@ nnoremap <leader>l :TagbarToggle<CR>
 "neomake
 autocmd! BufWritePost * Neomake
 let g:neomake_open_list = 2
+
+
 
 
