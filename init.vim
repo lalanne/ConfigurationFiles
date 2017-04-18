@@ -8,6 +8,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neomake/neomake'
+Plug 'ternjs/tern_for_vim'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
