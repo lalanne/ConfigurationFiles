@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neomake/neomake'
 Plug 'ternjs/tern_for_vim'
 Plug 'pangloss/vim-javascript'
+Plug 'Shougo/unite.vim'
 
 call plug#end()
 
