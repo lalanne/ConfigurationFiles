@@ -7,10 +7,9 @@ Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'neomake/neomake'
 Plug 'ternjs/tern_for_vim'
 Plug 'pangloss/vim-javascript'
-Plug 'Shougo/unite.vim'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
@@ -20,13 +19,13 @@ call plug#end()
 "set t_Co=16
 "colorscheme solarized
 
-let g:rehash256 = 0
-let g:molokai_original = 1
+"let g:rehash256 = 0
+"let g:molokai_original = 1
 colorscheme molokai
 
 "transparency
 "hi Normal ctermbg=NONE
-set t_Co=256
+"set t_Co=256
 
 "General
 set ruler               "shows line and column of the cursor
