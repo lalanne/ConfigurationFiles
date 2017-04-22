@@ -23,14 +23,15 @@ set shiftwidth=4        "number of spaces to use when auto indent
 set expandtab           "insert spaces where tabs are inserted
 set smartindent
 set autoindent         
-"set showbreak=↪
+set showbreak=↪
 set hlsearch            "highlight search terms
 set incsearch           "show search matches as you type
 set showmatch           "show matching parenthesis
 set cursorline          "highlight currentline
+set list                "show special characters
+set listchars=tab:▸\ ,eol:¬ "show tabs and end of line
 
 "hi clear cursorline     " clear cursorline options
-"set cursorline          " highlight current line
 "hi cursorline term=bold cterm=bold guibg=white
 "hi cursorlinenr ctermfg=250 ctermbg=black
 
