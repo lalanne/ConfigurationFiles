@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ternjs/tern_for_vim'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
