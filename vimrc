@@ -12,6 +12,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/neocomplete.vim'
+Plug 'vim-scripts/a.vim'
 
 call plug#end()
 
