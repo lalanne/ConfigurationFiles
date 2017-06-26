@@ -12,6 +12,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neoinclude.vim'
 Plug 'vim-scripts/a.vim'
 
 call plug#end()
@@ -159,3 +160,16 @@ let g:syntastic_python_checkers = ['pylint']
 
 "neocomplete
 let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:marching_include_paths = [
+            \ '/usr/include',
+            \ '/home/vagrant/zwc_platform/src/core'
+            \ ]
+
+let g:syntastic_cpp_include_dirs = [ '/home/vagrant/zwc_platform/src/core',
+                                \ '/home/vagrant/zwc_platform/src/frmwrk',
+                                \ '/home/vagrant/zwc_platform/src/utils/js',
+                                \ '/home/vagrant/zwc_platform/src/utils/js/classes',
+                                \ '/home/vagrant/SpiderMonkeys/js-1.8.5/js/src',
+                                \ '/home/vagrant/SpiderMonkeys/js-1.8.5/js/src/build_OPT.OBJ',
+                                \ '/usr/include/nspr4/']
