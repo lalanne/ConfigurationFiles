@@ -13,6 +13,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/neocomplete.vim'
 Plug 'fatih/vim-go'
+Plug 'vim-scripts/a.vim'
 
 call plug#end()
 
