@@ -12,6 +12,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/neocomplete.vim'
+Plug 'fatih/vim-go'
 
 call plug#end()
 
@@ -154,7 +155,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['flake8']
 
 "neocomplete
 let g:neocomplete#enable_at_startup = 1
