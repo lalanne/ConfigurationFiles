@@ -3,15 +3,20 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'neomake/neomake'
 Plug 'vim-syntastic/syntastic'
 Plug 'ternjs/tern_for_vim'
 Plug 'pangloss/vim-javascript'
-Plug 'Shougo/unite.vim'
+"Plug 'Shougo/unite.vim'
+Plug 'tpope/vim-surround'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neoinclude.vim'
+Plug 'fatih/vim-go'
+Plug 'vim-scripts/a.vim'
 
 call plug#end()
 
