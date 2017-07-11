@@ -174,3 +174,6 @@ let g:syntastic_cpp_include_dirs = [ '/home/vagrant/zwc_platform/src/core',
                                 \ '/home/vagrant/SpiderMonkeys/js-1.8.5/js/src',
                                 \ '/home/vagrant/SpiderMonkeys/js-1.8.5/js/src/build_OPT.OBJ',
                                 \ '/usr/include/nspr4/']
+
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
