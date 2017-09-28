@@ -52,6 +52,10 @@ else
     set number          "show line numbers
 endif
 
+"limit column
+highlight OverLength ctermbg=green ctermfg=white guibg=#592929
+match OverLength /\%86v.\+/
+
 " Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
 
