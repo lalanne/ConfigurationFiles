@@ -67,7 +67,7 @@ let g:deoplete#enable_at_startup = 1
 "vim airline (powerline)
 set laststatus=2
 let g:airline_powerline_fonts=1
-let g:airline_theme='dark'
+let g:airline_theme='light'
 "tabs airline
 let g:airline#extensions#tabline#enabled = 1
 
