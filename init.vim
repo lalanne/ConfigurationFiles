@@ -17,13 +17,17 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'fatih/vim-go'
 Plug 'vim-scripts/a.vim'
+Plug 'arakashic/nvim-colors-solarized'
 
 call plug#end()
 
 "truecolors
 set termguicolors
 
-colorscheme molokai
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set background=light
+colorscheme solarized
+"colorscheme molokai
 
 "General
 set ruler               "shows line and column of the cursor
