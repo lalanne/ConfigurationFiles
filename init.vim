@@ -26,8 +26,8 @@ set termguicolors
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=light
-colorscheme solarized
-"colorscheme molokai
+"colorscheme solarized
+colorscheme molokai
 
 "General
 set ruler               "shows line and column of the cursor
@@ -53,7 +53,7 @@ else
 endif
 
 "limit column
-highlight OverLength ctermbg=green ctermfg=white guibg=#592929
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%86v.\+/
 
 " Give a shortcut key to NERD Tree
