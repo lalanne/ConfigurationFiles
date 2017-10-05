@@ -18,6 +18,7 @@ Plug 'Shougo/neoinclude.vim'
 Plug 'fatih/vim-go'
 Plug 'vim-scripts/a.vim'
 Plug 'arakashic/nvim-colors-solarized'
+Plug 'Raimondi/delimitMate'
 
 call plug#end()
 
