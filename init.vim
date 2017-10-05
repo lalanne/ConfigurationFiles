@@ -20,6 +20,8 @@ Plug 'vim-scripts/a.vim'
 Plug 'arakashic/nvim-colors-solarized'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
+Plug 'Yggdroot/indentLine'
+Plug 'elzr/vim-json'
 
 call plug#end()
 
