@@ -119,7 +119,3 @@ let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_sh_checkers=['sh','shellcheck','checkbashisms']
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-
-
-
-
