@@ -22,6 +22,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'elzr/vim-json'
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
