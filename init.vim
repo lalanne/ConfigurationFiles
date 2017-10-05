@@ -19,6 +19,7 @@ Plug 'fatih/vim-go'
 Plug 'vim-scripts/a.vim'
 Plug 'arakashic/nvim-colors-solarized'
 Plug 'Raimondi/delimitMate'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
