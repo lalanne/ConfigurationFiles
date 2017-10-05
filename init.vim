@@ -23,6 +23,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'elzr/vim-json'
 Plug 'cespare/vim-toml'
+Plug 'icymind/NeoSolarized'
 
 call plug#end()
 
@@ -30,9 +31,10 @@ call plug#end()
 set termguicolors
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set background=light
+"set background=light
 "colorscheme solarized
 colorscheme molokai
+"colorscheme NeoSolarized
 
 "General
 set ruler               "shows line and column of the cursor
