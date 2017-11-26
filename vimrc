@@ -62,6 +62,19 @@ set visualbell
 set backspace=indent,eol,start      "allows you to delete previously enter characters
                                     "with backspace key
  
+"limit column
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%86v.\+/
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+"CtrlP
+nnoremap <leader>p :CtrlP<CR>
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 syntax on
 
 filetype on             "detecting file type that is being edited
