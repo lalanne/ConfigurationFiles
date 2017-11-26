@@ -1,4 +1,3 @@
-"handling plugins
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'majutsushi/tagbar'
@@ -7,30 +6,32 @@ Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'vim-syntastic/syntastic'
 Plug 'ternjs/tern_for_vim'
 Plug 'pangloss/vim-javascript'
-Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neoinclude.vim'
+Plug 'arakashic/nvim-colors-solarized'
+Plug 'Raimondi/delimitMate'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
 Plug 'vim-scripts/a.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'elzr/vim-json'
+Plug 'cespare/vim-toml'
+Plug 'icymind/NeoSolarized'
 
 call plug#end()
 
-"color scheme
-"syntax enable
-"set background=dark
-"set t_Co=16
-"colorscheme solarized
+"truecolors
+set termguicolors
 
-"let g:rehash256 = 0
-"let g:molokai_original = 1
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
 colorscheme molokai
-
-"transparency
-"hi Normal ctermbg=NONE
-"set t_Co=256
 
 "General
 set ruler               "shows line and column of the cursor
@@ -47,10 +48,6 @@ set showmatch           "show matching parenthesis
 set cursorline          "highlight currentline
 set list                "show special characters
 set listchars=tab:▸\ ,eol:¬ "show tabs and end of line
-
-"hi clear cursorline     " clear cursorline options
-"hi cursorline term=bold cterm=bold guibg=white
-"hi cursorlinenr ctermfg=250 ctermbg=black
 
 if version >= 703
     set relativenumber  "show relative line numbers
@@ -156,24 +153,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_enable_ballons=has('ballon_eval')
 
 let g:syntastic_python_checkers = ['flake8']
-
-"neocomplete
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:marching_include_paths = [
-            \ '/usr/include',
-            \ '/home/vagrant/zwc_platform/src/core'
-            \ ]
-
-let g:syntastic_cpp_include_dirs = [ '/home/vagrant/zwc_platform/src/core',
-                                \ '/home/vagrant/zwc_platform/src/frmwrk',
-                                \ '/home/vagrant/zwc_platform/src/utils/js',
-                                \ '/home/vagrant/zwc_platform/src/utils/js/classes',
-                                \ '/home/vagrant/SpiderMonkeys/js-1.8.5/js/src',
-                                \ '/home/vagrant/SpiderMonkeys/js-1.8.5/js/src/build_OPT.OBJ',
-                                \ '/usr/include/nspr4/']
-
+let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_sh_checkers=['sh','shellcheck','checkbashisms']
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
