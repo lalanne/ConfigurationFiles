@@ -136,8 +136,8 @@ nnoremap <leader>l :TagbarToggle<CR>
 "autocmd BufEnter *.hpp nested TagbarOpen
 "autocmd BufEnter *.c nested TagbarOpen
 "autocmd BufEnter *.h nested TagbarOpen
-"autocmd BufEnter *.js TagbarOpen
-"autocmd BufEnter *.py nested TagbarOpen
+autocmd BufEnter *.js nested TagbarOpen
+autocmd BufEnter *.py nested TagbarOpen
 autocmd BufEnter *.go nested TagbarOpen
 
 "CtrlP
