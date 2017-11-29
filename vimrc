@@ -48,8 +48,9 @@ set hlsearch            "highlight search terms
 set incsearch           "show search matches as you type
 set showmatch           "show matching parenthesis
 set cursorline          "highlight currentline
-set list                "show special characters
-set listchars=tab:▸\ ,eol:¬ "show tabs and end of line
+"set list                "show special characters
+"set listchars=eol:¬     "show end of line
+"set listchars=tab:▸\ ,eol:¬ "show tabs and end of line
 
 if version >= 703
     set relativenumber  "show relative line numbers
@@ -65,8 +66,9 @@ set backspace=indent,eol,start      "allows you to delete previously enter chara
                                     "with backspace key
  
 "limit column
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+highlight OverLength ctermbg=red ctermfg=green guibg=#592929
 match OverLength /\%86v.\+/
+set colorcolumn=86
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
@@ -111,7 +113,7 @@ let g:SuperTabDefaultCompletionType = "context"
 "vim airline (powerline)
 set laststatus=2 
 let g:airline_powerline_fonts=0
-let g:airline_theme='dark' 
+let g:airline_theme='light' 
 "tabs airline
 let g:airline#extensions#tabline#enabled = 1
 
