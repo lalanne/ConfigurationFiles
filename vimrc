@@ -19,7 +19,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
 Plug 'vim-scripts/a.vim'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 Plug 'elzr/vim-json'
 Plug 'cespare/vim-toml'
 Plug 'icymind/NeoSolarized'
@@ -92,13 +92,6 @@ set completeopt=menuone,menu,longest,preview
 " Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
 
-"project compilation and execution C++, via a Makefile
-map <F11> :w<CR> :!clear; make && ./tests<CR>
-"single file compilation and execution C++
-map <F8> : !c++ % && ./a.out <CR>
-"single file compilation and execution C++
-map <F7> : !gcc % && ./a.out <CR>
-
 nnoremap - <C-w>s 
 nnoremap \| <C-w>v A
 
@@ -113,7 +106,7 @@ let g:SuperTabDefaultCompletionType = "context"
 "vim airline (powerline)
 set laststatus=2 
 let g:airline_powerline_fonts=0
-let g:airline_theme='light' 
+let g:airline_theme='molokai'
 "tabs airline
 let g:airline#extensions#tabline#enabled = 1
 
@@ -136,16 +129,13 @@ set noswapfile
 "Tagbar
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
-"autocmd BufEnter *.cpp nested TagbarOpen
-"autocmd BufEnter *.hpp nested TagbarOpen
-"autocmd BufEnter *.c nested TagbarOpen
-"autocmd BufEnter *.h nested TagbarOpen
+autocmd BufEnter *.cpp nested TagbarOpen
+autocmd BufEnter *.hpp nested TagbarOpen
+autocmd BufEnter *.c nested TagbarOpen
+autocmd BufEnter *.h nested TagbarOpen
 autocmd BufEnter *.js nested TagbarOpen
 autocmd BufEnter *.py nested TagbarOpen
 autocmd BufEnter *.go nested TagbarOpen
-
-"CtrlP
-nnoremap <leader>p :CtrlP<CR>
 
 "For MacVIM to show the symbols of powerline airline
 set guifont=Source\ Code\ Pro\ for\ Powerline
@@ -154,13 +144,6 @@ set guifont=Source\ Code\ Pro\ for\ Powerline
 set foldmethod=syntax
 set nofoldenable "no fold when open
 set foldlevel=2
-
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-
-"ctrlp
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 
 "syntastic
 set statusline+=%#warningmsg#
