@@ -31,7 +31,9 @@ set termguicolors
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-colorscheme molokai
+"colorscheme molokai
+colorscheme NeoSolarized
+set background=dark
 
 "General
 set ruler               "shows line and column of the cursor
