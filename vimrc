@@ -69,6 +69,9 @@ set visualbell
 set backspace=indent,eol,start      "allows you to delete previously enter characters
                                     "with backspace key
  
+"gitgutter
+let g:gitgutter_override_sign_column_highlight = 0
+
 "limit column
 highlight OverLength ctermbg=red ctermfg=green guibg=#592929
 match OverLength /\%86v.\+/
