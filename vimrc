@@ -23,6 +23,9 @@ Plug 'vim-scripts/a.vim'
 Plug 'elzr/vim-json'
 Plug 'cespare/vim-toml'
 Plug 'icymind/NeoSolarized'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'tarekbecker/vim-yaml-formatter'
+Plug 'Shougo/denite.nvim'
 
 call plug#end()
 
@@ -34,10 +37,12 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 "colorscheme molokai
 colorscheme NeoSolarized
 set background=dark
-let g:neosolarized_contrast = "high"
+let g:neosolarized_contrast = "normal"
 let g:neosolarized_bold = 1
 let g:neosolarized_underline = 1
 let g:neosolarized_italic = 1
+set t_8f=^[[38;2;%lu;%lu;%lum
+set t_8b=^[[48;2;%lu;%lu;%lum
 
 "General
 set ruler               "shows line and column of the cursor
@@ -169,3 +174,6 @@ let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_sh_checkers=['sh','shellcheck','checkbashisms']
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+
+"yaml formatter
+let g:yaml_formatter_indent_collection=1
