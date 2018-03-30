@@ -147,7 +147,6 @@ autocmd BufEnter *.c nested TagbarOpen
 autocmd BufEnter *.h nested TagbarOpen
 autocmd BufEnter *.js nested TagbarOpen
 autocmd BufEnter *.py nested TagbarOpen
-autocmd BufEnter *.go nested TagbarOpen
 
 "For MacVIM to show the symbols of powerline airline
 set guifont=Source\ Code\ Pro\ for\ Powerline
