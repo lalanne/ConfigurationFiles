@@ -34,15 +34,15 @@ set termguicolors
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-"colorscheme molokai
-colorscheme NeoSolarized
-set background=dark
-let g:neosolarized_contrast = "normal"
-let g:neosolarized_bold = 1
-let g:neosolarized_underline = 1
-let g:neosolarized_italic = 1
-set t_8f=^[[38;2;%lu;%lu;%lum
-set t_8b=^[[48;2;%lu;%lu;%lum
+colorscheme molokai
+"colorscheme NeoSolarized
+"set background=dark
+"let g:neosolarized_contrast = "normal"
+"let g:neosolarized_bold = 1
+"let g:neosolarized_underline = 1
+"let g:neosolarized_italic = 1
+"set t_8f=^[[38;2;%lu;%lu;%lum
+"set t_8b=^[[48;2;%lu;%lu;%lum
 
 "General
 set ruler               "shows line and column of the cursor
