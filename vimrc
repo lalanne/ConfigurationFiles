@@ -27,6 +27,8 @@ Plug 'icymind/NeoSolarized'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'tarekbecker/vim-yaml-formatter'
 Plug 'Shougo/denite.nvim'
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 call plug#end()
 
@@ -195,3 +197,13 @@ let g:go_addtags_transform = "camelcase"
 au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
 au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
 au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
+
+"let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+
+"rust
+set hidden
+let g:racer_cmd = "/Users/lalanne/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+let $RUST_SRC_PATH="/Users/lalanne/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+let g:rustfmt_autosave = 1
+
