@@ -6,7 +6,7 @@ Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'vim-syntastic/syntastic'
 Plug 'ternjs/tern_for_vim'
@@ -29,6 +29,12 @@ Plug 'tarekbecker/vim-yaml-formatter'
 Plug 'Shougo/denite.nvim'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+
+"autocompletion (also a linter - diagnostics)
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': 'cpp' }
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'rhysd/vim-clang-format'
+
 
 call plug#end()
 
@@ -144,12 +150,6 @@ set noswapfile
 "Tagbar
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
-autocmd BufEnter *.cpp nested TagbarOpen
-autocmd BufEnter *.hpp nested TagbarOpen
-autocmd BufEnter *.c nested TagbarOpen
-autocmd BufEnter *.h nested TagbarOpen
-autocmd BufEnter *.js nested TagbarOpen
-autocmd BufEnter *.py nested TagbarOpen
 
 "For MacVIM to show the symbols of powerline airline
 set guifont=Source\ Code\ Pro\ for\ Powerline
@@ -175,8 +175,13 @@ let g:syntastic_enable_ballons=has('ballon_eval')
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_sh_checkers=['sh','shellcheck','checkbashisms']
-let g:syntastic_cpp_compiler = 'g++'
+
+let g:syntastic_cpp_compiler = 'c++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_remove_include_errors = 1
+let g:syntastic_c_config_file = '.syntastic_cpp_config'
+let g:syntastic_cpp_config_file = '.syntastic_cpp_config'
 
 "yaml formatter
 let g:yaml_formatter_indent_collection=1
@@ -203,7 +208,30 @@ au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
 "rust
 set hidden
 let g:racer_cmd = "/Users/lalanne/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
+let g:racer_experimental_completer=1
 let $RUST_SRC_PATH="/Users/lalanne/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
-let g:rustfmt_autosave = 1
+let g:rustfmt_autosave=1
 
+"cpp
+let g:cpp_member_variable_highlight = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"" turn on completion in comments
+let g:ycm_complete_in_comments=1
+"" load ycm conf by default
+let g:ycm_confirm_extra_conf=0
+"" turn on tag completion
+let g:ycm_collect_identifiers_from_tags_files=1
+"" only show completion as a list instead of a sub-window
+"set completeopt-=preview
+"" start completion from the first character
+let g:ycm_min_num_of_chars_for_completion=1
+"" don't cache completion items
+let g:ycm_cache_omnifunc=0
+"" complete syntax keywords
+let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+" clang_format
+let g:clang_format#code_style="google"
+let g:clang_format#auto_format=1
