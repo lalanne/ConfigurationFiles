@@ -1,36 +1,60 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" symbols bar
 Plug 'majutsushi/tagbar'
+
+" File explorer bar
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Fuzzy search of files
 Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
+
+" Git integration
 Plug 'tpope/vim-fugitive'
+
+" Airline bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+
+" Lintern/Syntax
 Plug 'vim-syntastic/syntastic'
-Plug 'ternjs/tern_for_vim'
-Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-surround'
-Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/neoinclude.vim'
-Plug 'arakashic/nvim-colors-solarized'
-Plug 'Raimondi/delimitMate'
+
+" Show errors/warnings in the side of the editor
 Plug 'airblade/vim-gitgutter'
+
+" Parenthesis
 Plug 'tpope/vim-surround'
-Plug 'fatih/vim-go'
-Plug 'vim-scripts/a.vim'
-"Plug 'Yggdroot/indentLine'
+Plug 'Raimondi/delimitMate'
+
+" JSON
 Plug 'elzr/vim-json'
+
+" TOML
 Plug 'cespare/vim-toml'
-Plug 'icymind/NeoSolarized'
-Plug 'ekalinin/Dockerfile.vim'
+
+" YAML
 Plug 'tarekbecker/vim-yaml-formatter'
-Plug 'Shougo/denite.nvim'
+
+" Docker
+Plug 'ekalinin/Dockerfile.vim'
+
+" Rustlang
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
-"autocompletion (also a linter - diagnostics)
+" protocol buffers
+Plug 'uarun/vim-protobuf'
+
+" Golang
+Plug 'fatih/vim-go'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+
+" autocompletion general
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" autocompletion (also a linter - diagnostics) C++
+Plug 'vim-scripts/a.vim'
+" Plug 'Shougo/neoinclude.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': 'cpp' }
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rhysd/vim-clang-format'
@@ -45,7 +69,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 colorscheme molokai
 "colorscheme NeoSolarized
-"set background=dark
+"set background=light
 "let g:neosolarized_contrast = "normal"
 "let g:neosolarized_bold = 1
 "let g:neosolarized_underline = 1
