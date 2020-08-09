@@ -48,18 +48,22 @@ Plug 'uarun/vim-protobuf'
 
 " Golang
 Plug 'fatih/vim-go'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 
-" autocompletion (also a linter - diagnostics) C++
+" autocompletion 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" C++
 Plug 'vim-scripts/a.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rhysd/vim-clang-format'
 
 "theme
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 
 call plug#end()
+
+let mapleader = ","
 
 "truecolors
 set termguicolors
@@ -110,9 +114,6 @@ let g:gitgutter_override_sign_column_highlight = 0
 highlight OverLength ctermbg=red ctermfg=green guibg=#592929
 match OverLength /\%86v.\+/
 set colorcolumn=86
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
 
 "CtrlP
 nnoremap <leader>p :CtrlP<CR>
@@ -246,4 +247,3 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
