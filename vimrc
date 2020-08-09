@@ -50,14 +50,9 @@ Plug 'uarun/vim-protobuf'
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
-" autocompletion general
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 " autocompletion (also a linter - diagnostics) C++
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-scripts/a.vim'
-" Plug 'Shougo/neoinclude.vim'
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': 'cpp' }
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rhysd/vim-clang-format'
 
@@ -76,14 +71,7 @@ hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 "colorscheme molokai
 colorscheme gruvbox
-"colorscheme NeoSolarized
 set background=dark
-"let g:neosolarized_contrast = "normal"
-"let g:neosolarized_bold = 1
-"let g:neosolarized_underline = 1
-"let g:neosolarized_italic = 1
-"set t_8f=^[[38;2;%lu;%lu;%lum
-"set t_8b=^[[48;2;%lu;%lu;%lum
 
 "General
 set ruler               "shows line and column of the cursor
