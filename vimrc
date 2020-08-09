@@ -5,12 +5,16 @@ Plug 'majutsushi/tagbar'
 
 " File explorer bar
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'ryanoasis/vim-devicons'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Fuzzy search of files
 Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
 
 " Git integration
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Airline bar
 Plug 'vim-airline/vim-airline'
@@ -18,9 +22,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Lintern/Syntax
 Plug 'vim-syntastic/syntastic'
-
-" Show errors/warnings in the side of the editor
-Plug 'airblade/vim-gitgutter'
 
 " Parenthesis
 Plug 'tpope/vim-surround'
@@ -50,15 +51,18 @@ Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " autocompletion general
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " autocompletion (also a linter - diagnostics) C++
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-scripts/a.vim'
 " Plug 'Shougo/neoinclude.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': 'cpp' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': 'cpp' }
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rhysd/vim-clang-format'
 
+"theme
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -67,9 +71,13 @@ set termguicolors
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-colorscheme molokai
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
+
+"colorscheme molokai
+colorscheme gruvbox
 "colorscheme NeoSolarized
-"set background=light
+set background=dark
 "let g:neosolarized_contrast = "normal"
 "let g:neosolarized_bold = 1
 "let g:neosolarized_underline = 1
@@ -223,9 +231,13 @@ let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
 let g:go_addtags_transform = "camelcase"
+let g:go_metalinter_command='golangci-lint'
+let g:go_metalinter_enabled = ['deadcode', 'errcheck', 'gosimple', 'govet', 'staticcheck', 'typecheck', 'unused', 'varcheck', 'bodyclose', 'goconst', 'unconvert', 'gocritic', 'gochecknoinits', 'gofmt']
+
 au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
 au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
 au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
+au filetype go inoremap <buffer> . .<C-x><C-o>
 
 "let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 
@@ -236,26 +248,14 @@ let g:racer_experimental_completer=1
 let $RUST_SRC_PATH="/Users/lalanne/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 let g:rustfmt_autosave=1
 
-"cpp
-let g:cpp_member_variable_highlight = 1
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-"" turn on completion in comments
-let g:ycm_complete_in_comments=1
-"" load ycm conf by default
-let g:ycm_confirm_extra_conf=0
-"" turn on tag completion
-let g:ycm_collect_identifiers_from_tags_files=1
-"" only show completion as a list instead of a sub-window
-"set completeopt-=preview
-"" start completion from the first character
-let g:ycm_min_num_of_chars_for_completion=1
-"" don't cache completion items
-let g:ycm_cache_omnifunc=0
-"" complete syntax keywords
-let g:ycm_seed_identifiers_with_syntax=1
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-
 " clang_format
 let g:clang_format#code_style="google"
 let g:clang_format#auto_format=1
+
+" Coc
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
