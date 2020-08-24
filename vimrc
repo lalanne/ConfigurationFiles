@@ -10,7 +10,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Fuzzy search of files
-Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
@@ -117,12 +116,6 @@ let g:gitgutter_override_sign_column_highlight = 0
 highlight OverLength ctermbg=red ctermfg=green guibg=#592929
 match OverLength /\%86v.\+/
 set colorcolumn=86
-
-"CtrlP
-nnoremap <leader>p :CtrlP<CR>
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 
 syntax on
 
@@ -260,3 +253,6 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Always enable preview window on the right with 60% width
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
+let g:fzf_checkout_track_key = 'alt-enter'
+nnoremap <leader>p :FZF<CR>
