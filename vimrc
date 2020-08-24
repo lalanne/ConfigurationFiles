@@ -11,6 +11,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Fuzzy search of files
 Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -254,3 +257,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" Always enable preview window on the right with 60% width
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
