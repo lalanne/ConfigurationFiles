@@ -168,11 +168,11 @@ set noswapfile
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
 
-autocmd BufEnter *.go nested TagbarOpen
-autocmd BufEnter *.cpp nested TagbarOpen
-autocmd BufEnter *.h nested TagbarOpen
-autocmd BufEnter *.hpp nested TagbarOpen
-autocmd BufEnter *.c nested TagbarOpen
+"autocmd BufEnter *.go nested TagbarOpen
+"autocmd BufEnter *.cpp nested TagbarOpen
+"autocmd BufEnter *.h nested TagbarOpen
+"autocmd BufEnter *.hpp nested TagbarOpen
+"autocmd BufEnter *.c nested TagbarOpen
 
 
 "For MacVIM to show the symbols of powerline airline
