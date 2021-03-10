@@ -5,7 +5,6 @@ Plug 'majutsushi/tagbar'
 
 " File explorer bar
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
@@ -54,6 +53,12 @@ Plug 'fatih/vim-go'
 " autocompletion 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" javascript
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'w0rp/ale'
+
 " C++
 Plug 'vim-scripts/a.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -62,8 +67,14 @@ Plug 'rhysd/vim-clang-format'
 "theme
 "Plug 'morhetz/gruvbox'
 Plug 'gruvbox-community/gruvbox'
+" icons
+Plug 'ryanoasis/vim-devicons'
+
+
 
 call plug#end()
+
+set encoding=UTF-8
 
 let mapleader = ","
 
@@ -115,7 +126,7 @@ let g:gitgutter_override_sign_column_highlight = 0
 "limit column
 highlight OverLength ctermbg=red ctermfg=green guibg=#592929
 match OverLength /\%86v.\+/
-set colorcolumn=86
+set colorcolumn=90
 
 syntax on
 
@@ -143,7 +154,7 @@ let g:SuperTabDefaultCompletionType = "context"
 
 "vim airline (powerline)
 set laststatus=2 
-let g:airline_powerline_fonts=0
+let g:airline_powerline_fonts=1
 let g:airline_theme='gruvbox'
 "tabs airline
 let g:airline#extensions#tabline#enabled = 1
@@ -182,6 +193,14 @@ set guifont=Source\ Code\ Pro\ for\ Powerline
 set foldmethod=syntax
 set nofoldenable "no fold when open
 set foldlevel=2
+
+"ale javascript
+let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+let g:ale_fix_on_save = 1
+
+
 
 "syntastic
 set statusline+=%#warningmsg#
@@ -247,12 +266,15 @@ let g:clang_format#auto_format=1
 " Coc
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier']  " list of CoC extensions needed
+
 " Always enable preview window on the right with 60% width
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
-let g:fzf_checkout_track_key = 'alt-enter'
+"let g:fzf_checkout_track_key = 'alt-enter'
 nnoremap <leader>p :FZF<CR>
