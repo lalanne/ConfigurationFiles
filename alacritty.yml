@@ -31,13 +31,14 @@ background_opacity: 0.95
 # Font configuration
 font:
   normal:
-    family: Source Code Pro
-    style: Medium
+      #family: Source Code Pro
+    family: "Source Code Pro"
+    style: Regular
   bold:
-    family: Source Code Pro
+    family: "Source Code Pro"
     style: Bold
   italic:
-    family: Source Code Pro
+    family: "Source Code Pro"
     style: Italic
   size: 8.0
   offset:
