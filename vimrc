@@ -52,6 +52,7 @@ Plug 'fatih/vim-go'
 
 " autocompletion 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 " javascript
 Plug 'yuezk/vim-js'
@@ -65,11 +66,16 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rhysd/vim-clang-format'
 
 "theme
-"Plug 'morhetz/gruvbox'
 Plug 'gruvbox-community/gruvbox'
 " icons
 Plug 'ryanoasis/vim-devicons'
 
+" notes
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
+
+"start
+Plug 'mhinz/vim-startify'
 
 
 call plug#end()
@@ -266,12 +272,12 @@ let g:clang_format#auto_format=1
 " Coc
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>
+nmap <silent> ga :call CocAction('jumpDefinition', 'tabe')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier']  " list of CoC extensions needed
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-clangd', 'coc-cmake']  " list of CoC extensions needed
 
 " Always enable preview window on the right with 60% width
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
