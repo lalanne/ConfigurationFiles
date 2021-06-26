@@ -84,8 +84,9 @@ set encoding=UTF-8
 
 let mapleader = ","
 
-"truecolors
-set termguicolors
+"truecolorsA
+" not working with mosh for some reason
+" set termguicolors
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
