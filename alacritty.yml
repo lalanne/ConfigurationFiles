@@ -32,7 +32,7 @@ background_opacity: 0.95
 font:
   normal:
       #family: Source Code Pro
-    family: "Source Code Pro"
+    family: "SauceCodePro Nerd Font"
     style: Regular
   bold:
     family: "Source Code Pro"
