@@ -93,9 +93,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
 
-"colorscheme molokai
-colorscheme gruvbox
-set background=dark
+colorscheme molokai
+"colorscheme gruvbox
+"set background=dark
 
 "General
 set ruler               "shows line and column of the cursor
@@ -162,7 +162,7 @@ let g:SuperTabDefaultCompletionType = "context"
 "vim airline (powerline)
 set laststatus=2 
 let g:airline_powerline_fonts=1
-let g:airline_theme='gruvbox'
+let g:airline_theme='minimalist'
 "tabs airline
 let g:airline#extensions#tabline#enabled = 1
 
