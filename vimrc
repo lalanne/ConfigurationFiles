@@ -167,9 +167,9 @@ let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 
 " the separator used on the left side
-let g:airline_left_sep=''
+"let g:airline_left_sep=''
 " the separator used on the right side 
-let g:airline_right_sep=''
+"let g:airline_right_sep='|'
 
                   
 if !exists('g:airline_symbols') 
