@@ -301,7 +301,17 @@ nmap <leader>rn <Plug>(coc-rename)
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-clangd', 'coc-cmake']  " list of CoC extensions needed
+let g:coc_global_extensions = [
+            \ 'coc-tslint-plugin', 
+            \ 'coc-tsserver', 
+            \ 'coc-css', 
+            \ 'coc-html', 
+            \ 'coc-json', 
+            \ 'coc-prettier', 
+            \ 'coc-clangd', 
+            \ 'coc-cmake',
+            \ 'coc-eslint',
+            \ ]  " list of CoC extensions needed
 
 " Always enable preview window on the right with 60% width
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
