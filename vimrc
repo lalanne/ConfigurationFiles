@@ -93,9 +93,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
 
-"colorscheme molokai
-colorscheme gruvbox
-set background=dark
+colorscheme molokai
+"colorscheme gruvbox
+"set background=dark
 
 "General
 set ruler               "shows line and column of the cursor
@@ -162,7 +162,7 @@ let g:SuperTabDefaultCompletionType = "context"
 "vim airline (powerline)
 set laststatus=2 
 let g:airline_powerline_fonts=1
-let g:airline_theme='gruvbox'
+let g:airline_theme='minimalist'
 "tabs airline
 let g:airline#extensions#tabline#enabled = 1
 
@@ -245,9 +245,9 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
-let g:go_auto_sameids = 1
+"let g:go_auto_sameids = 0
 let g:go_fmt_command = "goimports"
-let g:go_auto_type_info = 1
+"let g:go_auto_type_info = 1
 let g:go_addtags_transform = "camelcase"
 let g:go_metalinter_command='golangci-lint'
 let g:go_metalinter_enabled = ['deadcode', 'errcheck', 'gosimple', 'govet', 'staticcheck', 'typecheck', 'unused', 'varcheck', 'bodyclose', 'goconst', 'unconvert', 'gocritic', 'gochecknoinits', 'gofmt']
@@ -277,6 +277,25 @@ nmap <silent> ga :call CocAction('jumpDefinition', 'tabe')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+
+" Mappings for CoCList
+" Show all diagnostics.
+nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-clangd', 'coc-cmake']  " list of CoC extensions needed
 
