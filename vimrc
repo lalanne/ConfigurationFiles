@@ -93,8 +93,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
 
-colorscheme molokai
-"colorscheme gruvbox
+"colorscheme molokai
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
 "set background=dark
 
 "General
@@ -291,6 +292,9 @@ endfunction
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
 
 
 " Mappings for CoCList
