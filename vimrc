@@ -2,6 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " symbols bar
 Plug 'majutsushi/tagbar'
+Plug 'hushicai/tagbar-javascript.vim'
 
 " File explorer bar
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -58,7 +59,8 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
+
 
 " C++
 Plug 'vim-scripts/a.vim'
@@ -93,10 +95,15 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 hi! Normal ctermbg=NONE guibg=NONE 
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
 
+set background=dark
 "colorscheme molokai
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
-"set background=dark
+augroup gruvbox
+  autocmd!
+  autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE
+  autocmd ColorScheme * highlight NonText guibg=NONE ctermbg=NONE
+augroup END
 
 "General
 set ruler               "shows line and column of the cursor
@@ -132,8 +139,8 @@ set backspace=indent,eol,start      "allows you to delete previously enter chara
 let g:gitgutter_override_sign_column_highlight = 0
 
 "limit column
-highlight OverLength ctermbg=red ctermfg=green guibg=#592929
-match OverLength /\%86v.\+/
+"highlight OverLength ctermbg=red ctermfg=green guibg=#592929
+match OverLength /\%80v.\+/
 set colorcolumn=90
 
 syntax on
@@ -203,8 +210,9 @@ set nofoldenable "no fold when open
 set foldlevel=2
 
 "ale javascript
+let g:ale_lint_on_save = 1
 let g:ale_fixers = {'javascript': ['eslint']}
-let g:ale_sign_error = '❌'
+let g:ale_sign_error = '●'
 let g:ale_sign_warning = '⚠️'
 let g:ale_fix_on_save = 1
 
