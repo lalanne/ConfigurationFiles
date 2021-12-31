@@ -77,7 +77,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 
 "start
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 
 
 call plug#end()
